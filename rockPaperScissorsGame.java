@@ -8,7 +8,8 @@ public class Main
 	    System.out.print("How Many Round You Want TO Play : ");
 	    int round=obj.nextInt();
 	    int youpoint=0;
-	    int aipoint =0; 
+	    int aipoint =0;
+	    char doyoucontinue='y';
 	    do{
         for(int i=1;i<=round;i++){
 	    System.out.println("ROCK(0) PAPER(1) SCISSOR(2)");
@@ -40,6 +41,17 @@ public class Main
         System.out.println("AI Choose : "+ai);
 	    
 	}
-	    }(while )
+	if(youpoint<aipoint){
+	    System.out.println("YOU WIN THIS GAME");
+	}
+	else if (youpoint>aipoint){
+	    System.out.println("AI WIN THIS GAME");
+	}else{
+	    System.out.println("ITS TIE PLAY ONE MORE TIME");
+	}
+	System.out.printf("Do You Want TO Continue ");
+	 doyoucontinue=obj.next().charAt(0);
+	 System.out.print("\033[H\033[2J");
+	    }while(doyoucontinue=='y'||doyoucontinue=='Y');
 	}
 }
